@@ -1,0 +1,6 @@
+module Pods_CoinAnaconda {
+  umbrella header "Pods-CoinAnaconda-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoinAnaconda" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ICC-yL-rZ9">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaF-Lk-7Ds">
+                                <rect key="frame" x="16" y="8" width="736" height="30"/>
+                                <color key="backgroundColor" red="0.61885240936290442" green="0.66666668653488159" blue="0.115326359352241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MDj-Qj-top"/>
+                                </constraints>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Select Internal"/>
+                                <connections>
+                                    <action selector="btnSelectInterval:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2I9-Uw-aM1"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ya9-Or-3Nn">
+                                <rect key="frame" x="16" y="329" width="736" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="l1Z-sT-qDU"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myCellInterval" rowHeight="35" id="1wD-5f-uim">
+                                        <rect key="frame" x="0.0" y="28" width="736" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1wD-5f-uim" id="pR9-KW-xve">
+                                            <rect key="frame" x="0.0" y="0.0" width="736" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pCO-pk-fwG"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3IL-4X-Te9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HaF-Lk-7Ds" firstAttribute="top" secondItem="ubH-gD-YaL" secondAttribute="top" constant="8" id="6kt-lK-w0s"/>
+                            <constraint firstItem="ubH-gD-YaL" firstAttribute="trailing" secondItem="Ya9-Or-3Nn" secondAttribute="trailing" constant="16" id="Fw5-80-7Dp"/>
+                            <constraint firstItem="HaF-Lk-7Ds" firstAttribute="leading" secondItem="ubH-gD-YaL" secondAttribute="leading" constant="16" id="Gvw-gB-UqN"/>
+                            <constraint firstItem="ubH-gD-YaL" firstAttribute="trailing" secondItem="HaF-Lk-7Ds" secondAttribute="trailing" constant="16" id="qyw-al-UBu"/>
+                            <constraint firstItem="Ya9-Or-3Nn" firstAttribute="leading" secondItem="ubH-gD-YaL" secondAttribute="leading" constant="16" id="yOT-Y1-kO0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ubH-gD-YaL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LH7-xl-SHs"/>
+                    <connections>
+                        <outlet property="btnInterval" destination="HaF-Lk-7Ds" id="ghj-BU-58i"/>
+                        <outlet property="tbvInterval" destination="Ya9-Or-3Nn" id="V40-iY-lBC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993.3593749999998" y="117.1875"/>
+        </scene>
+    </scenes>
+</document>
